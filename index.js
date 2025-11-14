@@ -6,7 +6,9 @@ const port = 5000;
 const app = express()
 
 app.use(express.json())
-app.use(cors())
+app.use(cors({
+  origin: ['https://radiant-strudel-c136a6.netlify.app', 'http://localhost:5173']
+}))
 
 
 const uri = "mongodb+srv://ataurrahman24707:tEt88ey8LswveXf1@cluster0.4jm04.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
@@ -23,7 +25,7 @@ const client = new MongoClient(uri, {
 
 async function run() {
   try {
-    await client.connect();
+    // await client.connect();
 
     const userCollection = client.db("userDB").collection("newUsers");
     // post all task data collection

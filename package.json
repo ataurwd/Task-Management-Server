@@ -8,7 +8,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "This is the backend of the **Ema Job Assignment** website, built using **Node.js, Express.js, and MongoDB**.",
   "dependencies": {
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
@@ -17,5 +17,15 @@
     "mongodb": "^6.21.0",
     "nodemailer": "^6.10.0",
     "stripe": "^17.6.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ataurwd/Task-Management-Server.git"
+  },
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ataurwd/Task-Management-Server/issues"
+  },
+  "homepage": "https://github.com/ataurwd/Task-Management-Server#readme"
 }
