@@ -68,29 +68,6 @@ async function run() {
     });
 
 
-    app.put("/tasks/:taskId", async (req, res) => {
-  const { taskId } = req.params;
-  const { title, description, status } = req.body;
-
-  try {
-    // Find the task by ID and update it
-    const updatedTask = await Task.findByIdAndUpdate(
-      taskId,
-      { title, description, status },
-      { new: true } // To return the updated task
-    );
-
-    if (!updatedTask) {
-      return res.status(404).json({ error: "Task not found" });
-    }
-
-    res.status(200).json(updatedTask); // Send the updated task back to the client
-  } catch (error) {
-    console.error("Error updating task:", error);
-    res.status(500).json({ error: "Failed to update task" });
-  }
-});
-
     app.get('/', (req, res) => {
     res.send('Welcome to server');
 });
